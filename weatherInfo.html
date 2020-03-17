@@ -1,0 +1,51 @@
+<template>
+    <div style="background-color: white;">
+        <div>
+            <div class="slds-m-vertical_large slds-text-heading_medium slds-text-title_bold slds-align_absolute-center">WEATHER INFORMATION</div>
+            
+            <div>
+                <div class="slds-p-top_large">
+                    <lightning-button variant="brand" label="Show My Location" onclick={handleGeolocation} class="slds-m-left_x-small">
+                    </lightning-button>
+                </div>
+    
+            </div>
+            
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-3">
+                    
+                    
+                        <lightning-input type="text" label="" onchange={handleCity} value={city} placeholder="Enter city name">
+                        </lightning-input>
+                 
+
+                    <div class="slds-p-top_medium">
+                        <lightning-button variant="brand" label="Show Weather Info" onclick={handleRetrieveWeather} class="slds-m-left_x-small">
+                        </lightning-button>
+                    </div>
+
+                </div>
+                <div class="slds-col slds-size_2-of-3 slds-p-top_x-large">
+                    
+                    <template if:true={infoFromResponse}>
+                        
+                        <div class=slds-align_absolute-center> <b><i>{city}</i></b> </div>
+                        <div> Weather Condition     : <b>{weatheDescription} </b> </div>
+                        <div> Temperature(c)        : <b>{temperature} </b></div>
+                        <div> Humidity(%)           : <b>{humidity}</b> </div>                        
+                        <div> Maximum Temperature(c): <b>{maxTemp}</b> </div>
+                        <div> Minimum Temperature(c): <b>{minTemp}</b> </div>
+                    
+                    </template>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <template if:true={spinner}>
+                <lightning-spinner size="medium"></lightning-spinner>
+            </template>
+        </div>
+        
+    </div>
+</template>
