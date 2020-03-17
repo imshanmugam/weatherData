@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>OpenWeatherMapApikey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>apikey of openweathermap api</shortDescription>
+        <value>cf34110e8f6d2c0bbee91547b591df80</value>
+    </labels>
+    <labels>
+        <fullName>googleMaps</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>google maps</shortDescription>
+        <value>https://maps.google.com/</value>
+    </labels>
+    <labels>
+        <fullName>openWeatherAPI_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>openWeatherAPI Endpoint</shortDescription>
+        <value>http://api.openweathermap.org/data/2.5/weather</value>
+    </labels>
+</CustomLabels>
